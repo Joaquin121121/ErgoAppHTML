@@ -34,6 +34,24 @@
         text-align: center;
         margin: 20px auto;
       }
+
+      .editable-placeholder {
+        position: relative;
+      }
+
+      .editable-placeholder::before {
+        content: "ngrese un valor...";
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        color: #aaa;
+        pointer-events: none; /* Allows clicks to pass through */
+      }
+
+      .editable-placeholder:focus::before {
+        content: ""; /* Hide placeholder on focus */
+      }
     </style>
     <title>Testeo de Funcionalidades</title>
   </head>
@@ -62,9 +80,21 @@
             >
               SJ
             </td>
-            <td contenteditable="true" id="row-1-1"></td>
-            <td contenteditable="true" id="row-1-2"></td>
-            <td contenteditable="true" id="row-1-3"></td>
+            <td
+              contenteditable="true"
+              class="editable-placeholder"
+              id="row-1-1"
+            ></td>
+            <td
+              contenteditable="true"
+              class="editable-placeholder"
+              id="row-1-2"
+            ></td>
+            <td
+              contenteditable="true"
+              class="editable-placeholder"
+              id="row-1-3"
+            ></td>
           </tr>
         </tbody>
       </table>
@@ -89,9 +119,21 @@
             >
               CMJ
             </td>
-            <td contenteditable="true" id="row-2-1"></td>
-            <td contenteditable="true" id="row-2-2"></td>
-            <td contenteditable="true" id="row-2-3"></td>
+            <td
+              contenteditable="true"
+              class="editable-placeholder"
+              id="row-2-1"
+            ></td>
+            <td
+              contenteditable="true"
+              class="editable-placeholder"
+              id="row-2-2"
+            ></td>
+            <td
+              contenteditable="true"
+              class="editable-placeholder"
+              id="row-2-3"
+            ></td>
           </tr>
         </tbody>
       </table>
