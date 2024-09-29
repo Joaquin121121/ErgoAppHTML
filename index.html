@@ -38,20 +38,6 @@
       .editable-placeholder {
         position: relative;
       }
-
-      .editable-placeholder::before {
-        content: "Ingrese un valor...";
-        position: absolute;
-        top: 50%;
-        left: 10px;
-        transform: translateY(-50%);
-        color: #aaa;
-        pointer-events: none; /* Allows clicks to pass through */
-      }
-
-      .editable-placeholder:focus::before {
-        content: ""; /* Hide placeholder on focus */
-      }
     </style>
     <title>Testeo de Funcionalidades</title>
   </head>
